@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Group List</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.treetable.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.treetable.js"></script>
+<script type="text/javascript" src="js/.colResizable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    }  });
+  $("#hierarchyTable tbody tr").mousedown(function() {
+    $("tr.selected").removeClass("selected");
+    $("td.selected").removeClass("selected");
+    $(this).addClass("selected");
+    $(this).children().addClass("selected");
+  });
+  $("tr[data-tt-id='hierarchyTable_root']").each(function () {
+    $(this).attr("style", "display:none");
+  });
+  $("tr[data-tt-parent-id='hierarchyTable_root']").each(function () {
+    $(this).attr("style", "display:table-row");
+    $("#hierarchyTable").treetable("expandNode", $(this).attr("data-tt-id"));
+  });
+  $("table").colResizable({    liveDrag:true,
+    fixed:false,
+    draggingClass:"dragging"
+  });
+});
+function expandAll() {
+  $("#hierarchyTable").treetable("expandAll");
+}
+function collapseAll() {
+  if ($("tr[data-tt-parent-id='hierarchyTable_root']").length > 0) {
+    $("tr[data-tt-parent-id='hierarchyTable_root']").each(function () {
+      var nodeId = $(this).attr("data-tt-id");
+      var node = $("#hierarchyTable").treetable("node", nodeId);
+      $("#hierarchyTable").treetable("collapseNodeRecursive", node);
+    });
+  } else {
+    $("#hierarchyTable").treetable("collapseAll");
+  }
+}
+</script>
+</head>
+<body><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Testbench Group List</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | hierarchy | modlist | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | asserts</div>
+
+</div>
+<div class="ui-layout-center">
+<b>Total Groups Coverage Summary</b>&nbsp;<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td nowrap width=65>SCORE</td><td nowrap width=65>INST SCORE</td><td nowrap width=65>WEIGHT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+</tr></table><br clear=all>
+<br clear=all>
+Total groups in report: 26<hr>
+<table id="hierarchyTable" border="0" cellpadding="0" cellspacing="0" class="sortable">
+  <thead class="table-header">
+    <tr>
+<th class="alfsrt">NAME</th><th><b>SCORE</b></th><th>INSTANCES</th><th>WEIGHT</th><th>GOAL</th><th>AT LEAST</th><th>PER INSTANCE</th><th>AUTO BIN MAX</th><th>PRINT MISSING</th><th class="alfsrt">COMMENT</th>    </tr>
+  </thead>
+  <tbody>
+    <tr data-tt-id="hierarchyTable_root">
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>    </tr>
+    <tr data-tt-id="grpinst_hash_1073380501" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::DEVICE_ID::device_id_cov"></a>
+<a href="grp0.html" >ral_pkg::DEVICE_ID::device_id_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_746957685" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::subscriber::cg"></a>
+<a href="grp1.html" >ral_pkg::subscriber::cg</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_659768009" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::VERSION::version_cov"></a>
+<a href="grp2.html" >ral_pkg::VERSION::version_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1268046232" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::SWITCH_STATUS::switch_status_cov"></a>
+<a href="grp3.html" >ral_pkg::SWITCH_STATUS::switch_status_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1466323225" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::PORT_STATUS::port_status_cov"></a>
+<a href="grp4.html" >ral_pkg::PORT_STATUS::port_status_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1294226728" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::GEN_STATUS::gen_status_cov"></a>
+<a href="grp5.html" >ral_pkg::GEN_STATUS::gen_status_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1137095931" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::STAT_RX::stat_rx_cov"></a>
+<a href="grp6.html" >ral_pkg::STAT_RX::stat_rx_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1525481116" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::STAT_TX::stat_tx_cov"></a>
+<a href="grp7.html" >ral_pkg::STAT_TX::stat_tx_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1828199901" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::STAT_DROP::stat_drop_cov"></a>
+<a href="grp8.html" >ral_pkg::STAT_DROP::stat_drop_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1231006402" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::SWITCH_CTRL::switch_ctrl_cov"></a>
+<a href="grp9.html" >ral_pkg::SWITCH_CTRL::switch_ctrl_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1543529498" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::PORT_ENABLE::port_enable_cov"></a>
+<a href="grp10.html" >ral_pkg::PORT_ENABLE::port_enable_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_490308985" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::FWD_ENABLE::fwd_enable_cov"></a>
+<a href="grp11.html" >ral_pkg::FWD_ENABLE::fwd_enable_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1806435792" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::GEN_CTRL::gen_ctrl_cov"></a>
+<a href="grp12.html" >ral_pkg::GEN_CTRL::gen_ctrl_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1051875843" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::GEN_PKT_CFG::gen_pkt_cfg_cov"></a>
+<a href="grp13.html" >ral_pkg::GEN_PKT_CFG::gen_pkt_cfg_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_84960390" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::GEN_INTERVAL::gen_interval_cov"></a>
+<a href="grp14.html" >ral_pkg::GEN_INTERVAL::gen_interval_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1323132353" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::GEN_COUNT::gen_count_cov"></a>
+<a href="grp15.html" >ral_pkg::GEN_COUNT::gen_count_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_280005582" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::IRQ_STATUS::irq_status_cov"></a>
+<a href="grp16.html" >ral_pkg::IRQ_STATUS::irq_status_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1374538283" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::IRQ_ENABLE::irq_enable_cov"></a>
+<a href="grp17.html" >ral_pkg::IRQ_ENABLE::irq_enable_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1996844926" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::IRQ_FORCE::irq_force_cov"></a>
+<a href="grp18.html" >ral_pkg::IRQ_FORCE::irq_force_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1381598597" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::ERR_STATUS::err_status_cov"></a>
+<a href="grp19.html" >ral_pkg::ERR_STATUS::err_status_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1162182387" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::ERR_ENABLE::err_enable_cov"></a>
+<a href="grp20.html" >ral_pkg::ERR_ENABLE::err_enable_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1953108464" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::ERR_INJECT::err_inject_cov"></a>
+<a href="grp21.html" >ral_pkg::ERR_INJECT::err_inject_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1638009915" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::ERR_COUNT::err_count_cov"></a>
+<a href="grp22.html" >ral_pkg::ERR_COUNT::err_count_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1680091700" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::ERR_INFO::err_info_cov"></a>
+<a href="grp23.html" >ral_pkg::ERR_INFO::err_info_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_1971591885" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::LOCK::lock_cov"></a>
+<a href="grp24.html" >ral_pkg::LOCK::lock_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+    <tr data-tt-id="grpinst_hash_26342898" data-tt-parent-id="hierarchyTable_root">
+<td><a name="tag_ral_pkg::SOFT_RESET::soft_reset_cov"></a>
+<a href="grp25.html" >ral_pkg::SOFT_RESET::soft_reset_cov</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">100   </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">1     </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl rt">64    </td>
+<td class="wht cl"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+
+<script>
+$("#hierarchyTable").treetable({ expandable: true });
+</script>
+</body>
+</html>

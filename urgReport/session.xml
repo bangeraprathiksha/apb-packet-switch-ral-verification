@@ -1,0 +1,101 @@
+<session version="1.1" release="Q-2020.03-SP2-8" timestp="2026-10-29 07:02:42 GMT">
+  <info>
+    <attr name="datetime" value="Thu Oct 29 12:32:50 2026
+"/>
+    <attr name="command" value="urg -dir simv.vdb -report urgReport -format both"/>
+  </info>
+  <hvp>
+    <datadef>
+      <metdef name="Group" type="percent" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Group" value="100%" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+    <scope type="group" name="ral_pkg::DEVICE_ID::device_id_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::subscriber::cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::VERSION::version_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::SWITCH_STATUS::switch_status_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::PORT_STATUS::port_status_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::GEN_STATUS::gen_status_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::STAT_RX::stat_rx_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::STAT_TX::stat_tx_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::STAT_DROP::stat_drop_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::SWITCH_CTRL::switch_ctrl_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::PORT_ENABLE::port_enable_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::FWD_ENABLE::fwd_enable_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::GEN_CTRL::gen_ctrl_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::GEN_PKT_CFG::gen_pkt_cfg_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::GEN_INTERVAL::gen_interval_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::GEN_COUNT::gen_count_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::IRQ_STATUS::irq_status_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::IRQ_ENABLE::irq_enable_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::IRQ_FORCE::irq_force_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::ERR_STATUS::err_status_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::ERR_ENABLE::err_enable_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::ERR_INJECT::err_inject_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::ERR_COUNT::err_count_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::ERR_INFO::err_info_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::LOCK::lock_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="ral_pkg::SOFT_RESET::soft_reset_cov">
+      <metric name="Group" value="100%" />
+    </scope>
+  </scope>
+  <scope type="assert" name="Statistics">
+  </scope>
+  </old_coverage>
+</session>

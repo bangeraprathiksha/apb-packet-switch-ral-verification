@@ -1,0 +1,37 @@
+Testbench Group List
+
+Total Groups Coverage Summary 
+SCORE  INST SCORE WEIGHT 
+100.00 100.00     1      
+
+
+Total groups in report: 26
+-------------------------------------------------------------------------------
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                      
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::DEVICE_ID::device_id_cov         
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::subscriber::cg                   
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::VERSION::version_cov             
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::SWITCH_STATUS::switch_status_cov 
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::PORT_STATUS::port_status_cov     
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::GEN_STATUS::gen_status_cov       
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::STAT_RX::stat_rx_cov             
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::STAT_TX::stat_tx_cov             
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::STAT_DROP::stat_drop_cov         
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::SWITCH_CTRL::switch_ctrl_cov     
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::PORT_ENABLE::port_enable_cov     
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::FWD_ENABLE::fwd_enable_cov       
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::GEN_CTRL::gen_ctrl_cov           
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::GEN_PKT_CFG::gen_pkt_cfg_cov     
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::GEN_INTERVAL::gen_interval_cov   
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::GEN_COUNT::gen_count_cov         
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::IRQ_STATUS::irq_status_cov       
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::IRQ_ENABLE::irq_enable_cov       
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::IRQ_FORCE::irq_force_cov         
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::ERR_STATUS::err_status_cov       
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::ERR_ENABLE::err_enable_cov       
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::ERR_INJECT::err_inject_cov       
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::ERR_COUNT::err_count_cov         
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::ERR_INFO::err_info_cov           
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::LOCK::lock_cov                   
+100.00 100.00    1      100    1        1            64           64                    ral_pkg::SOFT_RESET::soft_reset_cov       
+

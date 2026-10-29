@@ -2142,6 +2142,7 @@ class gen_pkt_cfg_seq extends top_reg_seq;
                 `uvm_error("GEN_PKT_CFG", "Backdoor write failed")
 
                 `uvm_info("SEQ",$sformatf("BACKDOOR WRITE | DATA=%08h", wdata),UVM_LOW)
+		regmodel.gen_pkt_cfg.read(status, rdata, UVM_BACKDOOR);
 
             if (rdata !== 32'h00BBAB0F)
                 `uvm_error("GEN_PKT_CFG",$sformatf("BACKDOOR MISMATCH | Expected=%08h Got=%08h", wdata, rdata))
@@ -3702,15 +3703,7 @@ class all_reg_regression_seq extends top_reg_seq;
         seq7 = stat_tx_seq::type_id::create("seq7");
         seq7.regmodel = regmodel;
         seq7.start(m_sequencer);
-
-/*        seq8 = stat_drop_seq::type_id::create("seq8");
-        seq8.regmodel = regmodel;
-        seq8.start(m_sequencer);
-*/
-/*        seq9 = switch_ctrl_seq::type_id::create("seq9");
-        seq9.regmodel = regmodel;
-        seq9.start(m_sequencer);
-*/
+        
         seq10 = port_enable_seq::type_id::create("seq10");
         seq10.regmodel = regmodel;
         seq10.start(m_sequencer);
@@ -3718,10 +3711,6 @@ class all_reg_regression_seq extends top_reg_seq;
         seq11 = fwd_enable_seq::type_id::create("seq11");
         seq11.regmodel = regmodel;
         seq11.start(m_sequencer);
-
-        /*seq12 = gen_ctrl_seq::type_id::create("seq12");
-        seq12.regmodel = regmodel;
-        seq12.start(m_sequencer);*/
 
         seq13 = gen_pkt_cfg_seq::type_id::create("seq13");
         seq13.regmodel = regmodel;
@@ -3770,10 +3759,6 @@ class all_reg_regression_seq extends top_reg_seq;
         seq29 = apply_reset_seq::type_id::create("seq23");
         seq29.regmodel = regmodel;
         seq29.start(m_sequencer);
-
-        //seq29.start(m_sequencer);
-
-        //seq29.start(m_sequencer);
 
         seq30 = dest_drop_seq::type_id::create("seq25");
         seq30.regmodel = regmodel;
