@@ -27,3 +27,5 @@ UVM-based verification of a 4-port APB3 packet switch using SystemVerilog and UV
 - Register Sequences
 - Scoreboard
 - UVM Tests
+
+Testbench architecture and Test Plan: https://drive.google.com/drive/folders/1Ao94XsTbExJMDdRvqvIpcAoko36KS9ZD?usp=sharing
